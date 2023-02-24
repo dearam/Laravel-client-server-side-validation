@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Post>
  */
-class UserdetailFactory extends Factory
+class UserdatasFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,9 +20,11 @@ class UserdetailFactory extends Factory
     public function definition(): array
     {
         return [
-            'name'=>$this->faker->name(),
-            'email'=>$this->faker->safeEmail(),
-            'phone'=>$this->faker->phoneNumber()
+            'name'=>$this->faker->name,
+            'email'=>$this->faker->safeEmail,
+            'phone'=>$this->faker->phoneNumber,
+            'address'=>$this->faker->address,
+            'imagepath'=>Str::slug($this->faker->imageUrl)
         ];
     }
 }
