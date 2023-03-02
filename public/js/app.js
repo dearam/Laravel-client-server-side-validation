@@ -1,15 +1,22 @@
 $(document).ready(function(){
 
-    let firstname=true,dateofbirth=true,number=true,profile=true,address=true,email=true;
+    let firstname=true,
+        dateofbirth=true,
+        number=true,
+        profile=true,
+        address=true,
+        email=true,
+        lastname=true;
 
     $("#submit").on('click',function (event){
         validate_Firstname();
+        validate_Lastname();
         validate_Email();
         validate_Number();
         validate_Profile();
         validate_Address();
         validate_dateofbirth();
-        if(firstname==true && dateofbirth==true && number==true && profile==true && address==true && email==true){
+        if(firstname==true && dateofbirth==true && number==true && profile==true && address==true && email==true && lastname==true){
             return true;
         }else{
             event.preventDefault();
@@ -41,6 +48,28 @@ $(document).ready(function(){
         }
     }
 
+    function validate_Lastname(){
+
+        Nameregex=/^[a-zA-Z]+$/g;
+        Namelenregex=/^.{3,}$/g;
+
+        if(!($("#input-lastname").val())){
+            $("#input-lastname").css("border-color","red");
+            $("#lastname").css("color","red");
+            $("#emptylast").text("Please supply your last name");
+            lastname=false;
+        }else if(!Nameregex.test($("#input-lastname").val()) || !Namelenregex.test($("#input-lastname").val())){
+            $("#input-lastname").css("border-color","red");
+            $("#lastname").css("color","red");
+            $("#emptylast").text("Please supply your valid last name");
+            lastname=false;
+        }else{
+            $("#input-lastname").css("border-color","green");
+            $("#firstname").css("color","green");
+            $("#emptylast").text("");
+            lastname=true;
+        }
+    }
 
 
     function validate_Email(){
@@ -94,6 +123,16 @@ $(document).ready(function(){
             $("#input-profile").css("border-color","green");
             $("#profile").css("color","green");
             profile=true;
+        }
+    }
+    function validate_Host(){
+        var selected=$('input[name="input_radio"]:checked').val();
+        if(!selected){
+            $("#hosting").css("color","red");
+            host=false;
+        }else{
+            $("#hosting").css("color","green");
+            host=true;
         }
     }
 

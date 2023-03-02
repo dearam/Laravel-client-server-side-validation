@@ -4,12 +4,14 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Userdatas extends Model
+class UserDatas extends Model
 {
-    use HasFactory;
+    use HasFactory,SoftDeletes;
 
-    protected $table='userdatas';
+    protected $table='user_datas';
     protected $primaryKey='id';
+    protected $=true;
     protected $fillable=['name','email','address','phone','imagepath'];
 }

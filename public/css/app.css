@@ -45,12 +45,12 @@
     justify-content: flex-start;
     align-items: flex-start;
 }
-.input-radio{
-    width: 70%;
-    position: relative;
-    gap: 10px;
-    justify-content:flex-start;
-}
+/*.input-radio{*/
+/*    width: 70%;*/
+/*    position: relative;*/
+/*    gap: 10px;*/
+/*    justify-content:flex-start;*/
+/*}*/
 .separate-radio{
     width: 15%;
     position: relative;
@@ -66,7 +66,8 @@ textarea{
 }
 .emptyfirst,
 .emptymail,
-.emptynumber{
+.emptynumber,
+.emptylast {
     font-size: 10px;
     bottom: 0;
     position: absolute;
@@ -161,36 +162,32 @@ button{
 /*week3-test*/
 
 
-table{
-    display: flex;
-    height: fit-content;
-    position: absolute;
-    width: 90%;
-    top: 0;
-    border: 10px solid #e5e5e5;
-    border-width: 60px 0px 60px 0px;
-    margin-bottom: 20px;
-}
-tr{
-    display: flex;
-    border: 1px solid #000;
-}
-td{
-    display: flex;
-    height: 70px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 280px;
-    background-color: white;
-}
-th{
-    display: flex;
+/*table{*/
+/*    display: flex;*/
+/*    position: relative;*/
+/*    top: 0;*/
+/*    margin: 5%;*/
+/*}*/
+/*tr{*/
+/*    display: flex;*/
+/*    border: 1px solid #000;*/
+/*}*/
+/*td{*/
+/*    display: flex;*/
+/*    height: 70px;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    width: 280px;*/
+/*    background-color: white;*/
+/*}*/
+/*th{*/
+/*    display: flex;*/
 
-    height: 70px;
-    justify-content: flex-start;
-    align-items: center;
-    width: 280px;
-}
+/*    height: 70px;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*    width: 280px;*/
+/*}*/
 img{
     width: 50px;
     height: 50px;
@@ -211,5 +208,73 @@ img{
     width: 280px;
     gap: 20px;
     padding: 2px 0px 0px 20px ;
+}
+
+.body-table{
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.button-delete{
+    background-color: orangered;
+    color: white;
+    left: 20%;
+    position: relative;
+    font-weight: bold;
+    top: 0;
+}
+.button-delete:hover{
+    border: 2px solid orangered;
+    color: orangered;
+    background-color: white;
+}
+.table-show{
+    background-color: white;
+}
+.button-log-out{
+    background-color: lightgreen;
+    color: black;
+    font-weight:  bold;
+    width: 100px;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    height: 50px;
+    position: absolute;
+    left: 45%;
+    top: 10px;
+    border-radius: 10px;
+}
+.button-log-out:hover{
+    border: 2px solid lightgreen;
+    color: lightgreen;
+    background-color: white;
+}
+.table-show{
+    display: flex;
+    width: 90%;
+    left: 3%;
+    position: relative;
+    border: 2px solid black;
+    margin-bottom: 100px;
+    margin-top: 100px;
+}
+
+tr{
+    display: flex;
+    border-top: 1px solid black;
+}
+td{
+    width: 220px;
+}
+th{
+    width: 200px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 

@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Usercontroller;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +14,10 @@ use App\Http\Controllers\Usercontroller;
 |
 */
 
-//Route::get('/', function () {
-//    return view('layouts\app');
-//});
+Route::get('/',[UserController::class,'Index']);
 
-Route::get('/',[Usercontroller::class,'Index']);
+Route::post('store',[UserController::class,'store'])->name('store');
+Route::get('/show',[UserController::class,'show'])->name('show');
 
-Route::post('dataInsert',[Usercontroller::class,'dataInsertion']);
+Route::delete('delete/{id}',[UserController::class,'destroy'])->name('delete');
 
-Route::get('/success',function (){
-    return view('form\success');
-});
