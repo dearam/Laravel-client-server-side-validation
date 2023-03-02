@@ -12,6 +12,5 @@ class UserDatas extends Model
 
     protected $table='user_datas';
     protected $primaryKey='id';
-    protected $=true;
     protected $fillable=['name','email','address','phone','imagepath'];
 }
