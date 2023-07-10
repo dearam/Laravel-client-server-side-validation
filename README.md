@@ -69,6 +69,15 @@ http://localhost:8000
 
 - Additional form fields or customizations can be made in the corresponding Blade view file located in the `resources/views` directory.
 
+## Output
+
+<img width="947" alt="Screenshot 2023-07-10 204730" src="https://github.com/dearam/newdearamportfolio/assets/80329368/793a1e14-4d8f-48ed-95f6-488d20c6a8c5">
+
+<img width="947" alt="Screenshot 2023-07-10 204802" src="https://github.com/dearam/newdearamportfolio/assets/80329368/f3af5f61-340c-4a18-853d-618481c490bb">
+
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
+
+
